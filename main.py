@@ -1,6 +1,7 @@
 import spacy
 import networkx as nx
 
+#EX-1
 def shortest_path(sentence):
 
     nlp = spacy.load("en_core_web_sm");
@@ -18,6 +19,7 @@ def shortest_path(sentence):
       token = it.text
       print(nx.shortest_path(graph, root, token))
 
+#EX-2
 def get_subtree(sentence, root_subtree):
 
   nlp = spacy.load("en_core_web_sm");
@@ -30,6 +32,7 @@ def get_subtree(sentence, root_subtree):
     
   return subtrees
 
+#EX-3
 def exist_subtree(sentence, tokens_list):
 
   nlp = spacy.load("en_core_web_sm");
@@ -60,12 +63,14 @@ def exist_subtree(sentence, tokens_list):
       index+=1
     return True
 
+#EX-4
 def head_span(sentence):
   nlp = spacy.load("en_core_web_sm");
   doc = nlp(sentence)
   span = doc[:]
   return span.root.text
 
+#EX-5
 def get_span(sentence):
   nlp = spacy.load("en_core_web_sm");
   doc = nlp(sentence)
