@@ -1,5 +1,5 @@
 import spacy
-import networkx as nx
+import networkx
 
 #EX-1
 def shortest_path(sentence):
@@ -17,7 +17,7 @@ def shortest_path(sentence):
     root = doc[:].root.text
     for it in doc:
       token = it.text
-      print(nx.shortest_path(graph, root, token))
+      print(networkx.shortest_path(graph, root, token))
 
 #EX-2
 def get_subtree(sentence, root_subtree):
