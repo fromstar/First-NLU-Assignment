@@ -20,7 +20,7 @@ def shortest_path(sentence):
       print(networkx.shortest_path(graph, root, token))
 
 #EX-2
-def get_subtree(sentence, root_subtree):
+def get_subtree(sentence):
 
   nlp = spacy.load("en_core_web_sm");
   doc = nlp(sentence)
@@ -93,12 +93,11 @@ if __name__ == '__main__':
     sentence = 'i saw the man with a telescope.'
     print('sentence: ' + sentence)
 
-    token = 'about'
-    tokens_list = ['from', 'italy']
+    tokens_list = ['with', 'a', 'telescope']
     print("\nEx. 1")
     shortest_path(sentence)
     print("\nEx. 2")
-    print(get_subtree(sentence, token))
+    print(get_subtree(sentence))
     print("\nEx. 3")
     if exist_subtree(sentence, tokens_list):
       print("The given list FORMS a subtree")
