@@ -12,7 +12,7 @@ def shortest_path(sentence):
         for child in token.children:
             edges.append(('{0}'.format(token.lower_), '{0}'.format(child.lower_)))
 
-    graph = nx.Graph(edges)
+    graph = networkx.Graph(edges)
 
     root = doc[:].root.text
     for it in doc:
