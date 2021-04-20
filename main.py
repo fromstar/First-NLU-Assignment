@@ -83,7 +83,7 @@ def get_span(sentence):
      token_list[0].append(token.text)
     elif(token.dep_ == 'dobj'):
       token_list[1].append(token.text)
-    elif(token.dep_ == 'iobj'):
+    elif(token.dep_ == 'dative'):
       token_list[2].append(token.text)
   return token_list
 
